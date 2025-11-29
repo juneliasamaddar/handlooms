@@ -40,7 +40,7 @@
             <p>Discover handcrafted sarees, dupattas, and textiles made by skilled artisans across India.</p>
             <a href="#products"><button class="btn-primary">Shop Now</button></a>
         </div>
-        <img class="hero-img" src="assets/images/hero.png">
+        <img class="hero-img" src="assets/images/hero.jpg">
     </div>
 
     <div class="section-title">Trending Now</div>
@@ -61,17 +61,27 @@
 
         <!-- PRODUCTS PAGE -->
         <section id="products" class="page">
-    <h2>All Products</h2>
 
-    <input 
-        id="search-bar" 
-        placeholder="Search for handloom items..." 
-        class="search-input"
-    >
+    <h2>Our Handloom Collection</h2>
+
+    <div class="product-controls">
+        <input 
+            id="search-bar" 
+            placeholder="Search sarees, dupattas, fabrics..." 
+            class="search-input"
+        >
+
+        <select id="category-filter" class="filter-select">
+            <option value="all">All Categories</option>
+            <option value="saree">Sarees</option>
+            <option value="dupatta">Dupattas</option>
+            <option value="fabric">Fabrics</option>
+        </select>
+    </div>
 
     <div class="product-grid" id="product-list"></div>
-</section>
 
+</section>
 
         <!-- CART PAGE -->
         <section id="cart" class="page">
