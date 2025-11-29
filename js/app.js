@@ -97,7 +97,7 @@ const products = [
     users.push({
         id: Date.now(),
         name,
-        email,
+        email,  
         pass,
         role
     });
