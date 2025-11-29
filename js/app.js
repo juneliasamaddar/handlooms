@@ -1,3 +1,28 @@
+
+// ------------------- DATABASE SETUP -----------------------
+const DB = {
+  USERS: "users",
+  PRODUCTS: "products",
+  PENDING: "pending_products",
+  CAMPAIGNS: "campaigns",
+  CART: "cart"
+};
+
+function read(key) {
+  return JSON.parse(localStorage.getItem(key)) || [];
+}
+
+function write(key, data) {
+  localStorage.setItem(key, JSON.stringify(data));
+}
+
+function initDB() {
+  Object.values(DB).forEach(key => {
+    if (!localStorage.getItem(key)) write(key, []);
+  });
+}
+
+initDB();
 // SAMPLE PRODUCT DATA
 const products = [
     {
